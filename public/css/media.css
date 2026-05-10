@@ -1,0 +1,47 @@
+    .container h2 {
+    font-weight: bold;
+    color: #2E7D32;
+    /* margin-top: -40px; */
+    }
+
+    .container p {
+    color: #555;
+
+    }
+
+    .media-card img,
+    .media-card video {
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .media-card img:hover,
+    .media-card video:hover {
+        transform: scale(1.03);
+    }
+
+    .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.95);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .lightbox-img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }

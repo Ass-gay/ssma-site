@@ -1,0 +1,35 @@
+/* ===================================
+   MOBILE RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:32px !important;
+    }
+
+    h2{
+        font-size:28px !important;
+    }
+
+    .container{
+        padding-left:18px;
+        padding-right:18px;
+    }
+
+    .author-header,
+    .pdf-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .book-cover{
+        height:250px !important;
+    }
+
+    .btn-book,
+    .btn-download{
+        width:100%;
+    }
+
+}

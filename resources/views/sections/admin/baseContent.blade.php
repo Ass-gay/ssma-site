@@ -1,0 +1,535 @@
+<div id="content" class="content dashboard-premium">
+
+    {{-- BREADCRUMB --}}
+    <ol class="breadcrumb dashboard-breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ route('admin.dashboard') }}">
+                SSMA
+            </a>
+        </li>
+
+        <li class="breadcrumb-item active">
+            Dashboard
+        </li>
+    </ol>
+
+    {{-- HEADER --}}
+    <div class="dashboard-header">
+
+        <div>
+            <h1 class="dashboard-title">
+                Tableau de Bord SSMA
+            </h1>
+
+            <p class="dashboard-subtitle">
+                Gestion intelligente de la plateforme SSMA
+            </p>
+        </div>
+
+        <div class="dashboard-date">
+            <i class="fa-solid fa-calendar-days"></i>
+
+            {{ now()->format('d M Y') }}
+        </div>
+
+    </div>
+
+    {{-- STATS --}}
+    <div class="row g-4">
+
+        {{-- MEMBRES --}}
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card members-card">
+
+                <div class="stats-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div class="stats-content">
+
+                    <span>Membres</span>
+
+                    <h2>
+
+                        {{ $membres ?? 0}}
+
+                    </h2>
+
+                    <p>
+                        Membres enregistrés
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {{-- MEDIA --}}
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card media-card">
+
+                <div class="stats-icon">
+                    <i class="fa-solid fa-photo-film"></i>
+                </div>
+
+                <div class="stats-content">
+
+                    <span>Médias</span>
+
+                    <h2>
+
+                        {{ $medias ?? 0}}
+
+                    </h2>
+
+                    <p>
+                        Photos & vidéos
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {{-- BOOKS --}}
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card books-card">
+
+                <div class="stats-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div class="stats-content">
+
+                    <span>Bibliothèque</span>
+
+                    <h2>
+
+                        {{ $books ?? 0}}
+
+                    </h2>
+
+                    <p>
+                        PDF & Audio
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {{-- EVENTS --}}
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card events-card">
+
+                <div class="stats-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div class="stats-content">
+
+                    <span>Événements</span>
+
+                    <h2>
+
+                        {{ $events ?? 0}}
+
+                    </h2>
+
+                    <p>
+                        Activités publiées
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {{-- SECOND SECTION --}}
+    <div class="row mt-4">
+
+        {{-- ACTIVITÉS --}}
+        <div class="col-lg-8">
+
+            <div class="dashboard-box">
+
+                <div class="box-header">
+
+                    <h4>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Activités récentes
+
+                    </h4>
+
+                </div>
+
+                <div class="activity-list">
+
+                    {{-- MEMBER --}}
+                    <div class="activity-item">
+
+                        <div class="activity-icon bg-primary">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <div>
+                            <h6>
+                                {{ $membres ?? 0}} membres enregistrés
+                            </h6>
+
+                            <small>
+                                Base de données SSMA
+                            </small>
+                        </div>
+
+                    </div>
+
+                    {{-- MEDIA --}}
+                    <div class="activity-item">
+
+                        <div class="activity-icon bg-danger">
+                            <i class="fa-solid fa-photo-film"></i>
+                        </div>
+
+                        <div>
+                            <h6>
+                                {{ $medias ?? 0}} médias publiés
+                            </h6>
+
+                            <small>
+                                Galerie mise à jour
+                            </small>
+                        </div>
+
+                    </div>
+
+                    {{-- BOOKS --}}
+                    <div class="activity-item">
+
+                        <div class="activity-icon bg-success">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <div>
+                            <h6>
+                                {{ $books ?? 0}} documents disponibles
+                            </h6>
+
+                            <small>
+                                Bibliothèque SSMA
+                            </small>
+                        </div>
+
+                    </div>
+
+                    {{-- EVENTS --}}
+                    <div class="activity-item border-0">
+
+                        <div class="activity-icon bg-warning">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+                            <h6>
+                                {{ $events ?? 0}} événements publiés
+                            </h6>
+
+                            <small>
+                                Activités SSMA
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {{-- QUICK ACTIONS --}}
+        <div class="col-lg-4">
+
+            <div class="dashboard-box quick-box">
+
+                <div class="box-header">
+
+                    <h4>
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        Actions rapides
+
+                    </h4>
+
+                </div>
+
+                <div class="quick-actions">
+
+                    <a href="{{route('admin.membres.index')}}" class="quick-btn">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Voir membre inscrit
+                    </a>
+
+                    <a href="{{route('admin.media.index')}}" class="quick-btn">
+                        <i class="fa-solid fa-photo-film"></i>
+                        Ajouter média
+                    </a>
+
+                    <a href="{{route('admin.books.index')}}" class="quick-btn">
+                        <i class="fa-solid fa-book-open"></i>
+                        Ajouter PDF
+                    </a>
+
+                    <a href="{{route('admin.events.index')}}" class="quick-btn">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        Ajouter événement
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+
+.dashboard-premium{
+    padding:30px;
+    background:#f4f7fb;
+    min-height:100vh;
+}
+
+/* BREADCRUMB */
+
+.dashboard-breadcrumb{
+    margin-bottom:25px;
+}
+
+.dashboard-breadcrumb a{
+    text-decoration:none;
+}
+
+/* HEADER */
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.dashboard-title{
+    font-size:40px;
+    font-weight:900;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.dashboard-subtitle{
+    color:#777;
+    margin:0;
+}
+
+.dashboard-date{
+    background:white;
+    padding:14px 22px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* STATS */
+
+.stats-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:28px;
+    padding:30px;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    min-height:180px;
+    transition:0.4s;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.stats-card:hover{
+    transform:translateY(-10px);
+}
+
+.members-card{
+    background:linear-gradient(135deg,#0d6efd,#3b82f6);
+}
+
+.media-card{
+    background:linear-gradient(135deg,#6f42c1,#9b59b6);
+}
+
+.books-card{
+    background:linear-gradient(135deg,#198754,#20c997);
+}
+
+.events-card{
+    background:linear-gradient(135deg,#dc3545,#ff6b6b);
+}
+
+/* ICON */
+
+.stats-icon{
+    width:80px;
+    height:80px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.18);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    flex-shrink:0;
+}
+
+/* CONTENT */
+
+.stats-content span{
+    font-size:15px;
+    opacity:0.9;
+}
+
+.stats-content h2{
+    font-size:45px;
+    font-weight:900;
+    margin:8px 0;
+}
+
+.stats-content p{
+    margin:0;
+    opacity:0.85;
+}
+
+/* BOX */
+
+.dashboard-box{
+    background:white;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.06);
+    height:100%;
+}
+
+.box-header{
+    margin-bottom:25px;
+}
+
+.box-header h4{
+    font-size:22px;
+    font-weight:800;
+    margin:0;
+}
+
+/* ACTIVITY */
+
+.activity-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 0;
+    border-bottom:1px solid #eee;
+}
+
+.activity-icon{
+    width:55px;
+    height:55px;
+    border-radius:18px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    flex-shrink:0;
+}
+
+.activity-item h6{
+    margin-bottom:5px;
+    font-weight:700;
+}
+
+.activity-item small{
+    color:#777;
+}
+
+/* QUICK */
+
+.quick-actions{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.quick-btn{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 20px;
+    background:#f4f7fb;
+    border-radius:18px;
+    text-decoration:none;
+    color:#111;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.quick-btn:hover{
+    background:#0d6efd;
+    color:white;
+    transform:translateX(8px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .dashboard-premium{
+        padding:20px;
+    }
+
+    .dashboard-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .dashboard-title{
+        font-size:30px;
+    }
+
+    .stats-card{
+        min-height:auto;
+    }
+
+    .stats-content h2{
+        font-size:36px;
+    }
+
+}
+
+</style>

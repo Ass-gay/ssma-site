@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Auteur extends Model
+{
+    protected $fillable = [
+
+        'nom',
+        'photo',
+        'bio',
+
+    ];
+
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
+}

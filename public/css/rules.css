@@ -1,0 +1,207 @@
+
+/* ================= NAV ================= */
+.navmenu a {
+    text-decoration: none !important;
+    color: #2E7D32;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navmenu a:hover {
+    color: #0f3d2e;
+    text-decoration: none !important;
+}
+
+/* ===================== BANNIÈRE SSMA PREMIUM ===================== */
+
+.ssma-hero {
+    position: relative;
+    height: 350px;
+    background: url('/images/baniere_ssma.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Overlay plus pro (dégradé + noir doux) */
+.ssma-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.75),
+        rgba(27, 94, 32, 0.55)
+    );
+    backdrop-filter: blur(2px);
+}
+
+/* Texte */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+/* Titre principal */
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Sous-texte */
+.hero-text p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Animation propre */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= TITRE ================= */
+/* ================= TITRE SECTION SSMA ================= */
+
+.title-section {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #2E7D32;
+    margin: 35px 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    display: inline-block;
+}
+
+/* ligne décorative */
+.title-section::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #2E7D32, #2e7d32);
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+/* centrage du bloc */
+.title-wrapper {
+    text-align: center;
+}
+
+/* ================= AUDIO SSMA ================= */
+
+/* ================= AUDIO SSMA BACKGROUND ================= */
+
+.ssma-audio-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* carte autour de l'audio */
+.ssma-audio-box {
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* audio */
+.ssma-audio-box audio {
+    width: 100%;
+    max-width: 950px;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* ================= RULES SSMA PREMIUM ================= */
+
+.rules-container {
+    width: 85%;
+    max-width: 9000px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    line-height: 1.8;
+}
+
+/* Articles */
+.rules-container h4 {
+    color: #2E7D32;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 18px;
+}
+
+/* petit trait vert à gauche */
+.rules-container h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 5px;
+    height: 18px;
+    background: #2e7d32;
+    border-radius: 5px;
+}
+
+/* texte */
+.rules-container p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* hover effet léger */
+.rules-container h4:hover {
+    color: #0f3d2e;
+    transition: 0.3s;
+}
+
+/* bouton accepter */
+.accept-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-accept {
+    display: inline-block;
+    background: #222222;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(27,94,32,0.25);
+}
+
+.btn-accept:hover {
+    transform: translateY(-3px);
+    background: #2E7D32;
+    color: #ffffff
+}

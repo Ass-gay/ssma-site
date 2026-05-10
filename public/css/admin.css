@@ -1,0 +1,12 @@
+table img {
+    object-fit: cover;
+}
+
+.table-hover tbody tr:hover {
+    background: #f4f7f6;
+}
+
+.alert {
+    border-radius: 10px;
+    font-weight: 500;
+}

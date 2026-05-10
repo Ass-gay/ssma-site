@@ -1,0 +1,88 @@
+body {
+    background: #f4f7f6;
+}
+.navmenu a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.navmenu a:hover {
+    text-decoration: none !important;
+}
+
+h1 {
+    text-align: center;
+    margin: 17px 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #2E7D32;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* petite ligne décorative dessous */
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #1b5e20;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* container */
+.ssma-container {
+    max-width: 2000px;
+    margin: 25px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* inputs */
+.form-control {
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #1b5e20;
+    box-shadow: 0 0 0 0.2rem rgba(27,94,32,0.2);
+}
+
+/* bouton */
+.ssma-btn {
+    background: #2E7D32;
+    width: 200px;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.ssma-btn:hover {
+    transform: scale(1.05);
+    background: #222222;
+}
+
+.iti {
+    width: 100%;
+}
+
+.iti input {
+    border-radius: 10px !important;
+    padding: 12px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .ssma-container {
+        padding: 20px;
+    }
+}
