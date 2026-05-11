@@ -2,12 +2,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>SSMA - Accueil</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="Ssmasenegal">
-  
+  <meta name="description" content="SSMA Sénégal - Plateforme de gestion moderne">
+  <meta name="keywords" content="SSMA, Sénégal, gestion, administration">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Favicons -->
-  <link href="templates/templateVitrine/assets/img/favicon.png" rel="icon">
+  <link rel="icon" href="{{ asset('images/logo-ssma.png') }}">
   <link href="templates/templateVitrine/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->

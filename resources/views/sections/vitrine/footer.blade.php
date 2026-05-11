@@ -8,7 +8,7 @@
                 <div class="footer-brand text-center text-lg-start">
                     <!-- LOGO -->
                     <a href="{{ route('home') }}">
-                        <img style="width:60px;" src="{{ asset('images/logo ssma.png') }}" alt="Logo">
+                        <img style="width:60px;" src="{{ asset('images/logo-ssma.png') }}" alt="Logo">
                     </a>
                 <h5 class="mb-4">SSMA</h5>
                 <p class="text-white">Association Sunu Papa Sunu Serigne Babacar Sy Abdou</p>

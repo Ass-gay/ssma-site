@@ -1,0 +1,229 @@
+.admin-users-page{
+    padding:30px;
+    background:#f4f7fb;
+    min-height:100vh;
+}
+
+/* HEADER */
+
+.users-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:35px;
+}
+
+.users-title{
+    font-size:38px;
+    font-weight:900;
+    color:#111;
+}
+
+.users-subtitle{
+    color:#777;
+    margin-top:10px;
+}
+
+.users-badge{
+    background:white;
+    padding:14px 22px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+    font-weight:700;
+}
+
+/* CARD */
+
+.premium-card{
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.06);
+
+    height:100%;
+}
+
+.card-top{
+    margin-bottom:30px;
+}
+
+.card-top h3{
+    font-size:24px;
+    font-weight:800;
+}
+
+/* FORM */
+
+.form-group label{
+    font-weight:700;
+    margin-bottom:12px;
+    display:block;
+}
+
+.input-box{
+    position:relative;
+}
+
+.input-box i{
+    position:absolute;
+
+    top:50%;
+    left:18px;
+
+    transform:translateY(-50%);
+
+    color:#666;
+}
+
+.input-box input,
+.input-box select{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    background:#f4f7fb;
+
+    border-radius:18px;
+
+    padding-left:55px;
+
+    font-size:15px;
+}
+
+.input-box input:focus,
+.input-box select:focus{
+
+    outline:none;
+
+    box-shadow:0 0 0 4px rgba(13,110,253,0.15);
+}
+
+/* BUTTON */
+
+.btn-save{
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#0d6efd,#3b82f6);
+
+    color:white;
+
+    font-size:16px;
+    font-weight:700;
+
+    transition:0.3s;
+}
+
+.btn-save:hover{
+    transform:translateY(-3px);
+}
+
+/* TABLE */
+
+.table thead{
+    background:#111;
+    color:white;
+}
+
+.table thead th{
+    padding:16px;
+    border:none;
+}
+
+.table tbody td{
+    padding:18px 16px;
+}
+
+/* USER */
+
+.user-nom{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.user-avatar{
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-weight:700;
+}
+
+/* BADGE */
+
+.badge-admin{
+    background:#198754;
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:13px;
+}
+
+.badge-user{
+    background:#6c757d;
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:13px;
+}
+
+/* ALERT */
+
+.premium-alert{
+    border:none;
+
+    border-radius:18px;
+
+    padding:18px 20px;
+
+    font-weight:600;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .users-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .users-title{
+        font-size:30px;
+    }
+
+    .premium-card{
+        padding:20px;
+    }
+}

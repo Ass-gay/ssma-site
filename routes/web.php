@@ -9,11 +9,12 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MembreController;
 use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\AuteurController;
+use App\Http\Controllers\UserController;
 use App\Models\Media;
 use App\Models\Equipe;
 use App\Models\Membre;
 use App\Models\Event;
-use App\Http\Controllers\Admin\DashboardController;
+use App\Models\Book;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,8 @@ Route::get('/', function () {
         'mediaGalerie'
     ));
 })->name('home');
+
+
 
 
 Route::get('/apropos', function () {
@@ -91,45 +94,20 @@ Route::get('/media/{id}', [MediaController::class, 'show'])->name('media.show');
 
 Route::get('/books', [BookController::class, 'vitrine'])->name('books.vitrine');
 
-// Route::get('/books',[BookController::class, 'auteurs'])->name('books.auteurs');
-
-// Route::get('/books/auteur/{id}',[BookController::class, 'auteur'])->name('books.auteur');
-
-// Route::get('/books/read/{id}',[BookController::class, 'read'])->name('books.read');
-
-// Route::get('/books/download/{id}',[BookController::class, 'download'])->name('books.download');
-
-// Route::get('/pdf/view/{id}',[BookController::class, 'viewPdf'])->name('books.viewPdf');
-/*
-|--------------------------------------------------------------------------
-| BOOKS
-|--------------------------------------------------------------------------
-*/
-
 // PAGE AUTEURS
-Route::get('/books',
-    [BookController::class, 'auteurs'])
-    ->name('books.auteurs');
+Route::get('/books', [BookController::class, 'auteurs'])->name('books.auteurs');
 
 // PAGE D’UN AUTEUR
-Route::get('/books/auteur/{id}',
-    [BookController::class, 'auteur'])
-    ->name('books.auteur');
+Route::get('/books/auteur/{id}', [BookController::class, 'auteur'])->name('books.auteur');
 
 // LECTURE PDF
-Route::get('/books/read/{id}',
-    [BookController::class, 'read'])
-    ->name('books.read');
+Route::get('/books/read/{id}', [BookController::class, 'read'])->name('books.read');
 
 // DOWNLOAD
-Route::get('/books/download/{id}',
-    [BookController::class, 'download'])
-    ->name('books.download');
+Route::get('/books/download/{id}', [BookController::class, 'download']) ->name('books.download');
 
 // VIEW PDF
-Route::get('/pdf/view/{id}',
-    [BookController::class, 'viewPdf'])
-    ->name('books.viewPdf');
+Route::get('/pdf/view/{id}', [BookController::class, 'viewPdf']) ->name('books.viewPdf');
 /*
 |--------------------------------------------------------------------------
 | CONTACT
@@ -144,7 +122,6 @@ Route::get('/contact', function () {
 
 Route::post('/contact', [ContactController::class, 'storePublic'])->name('contact.public');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
-// Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 
 /*
 |--------------------------------------------------------------------------
@@ -178,11 +155,6 @@ Route::get('/devenir-membre', fn() => view('members.rules'))->name('members.rule
 
 Route::get('/devenir-membre/formulaire', fn() => view('members.form'))->name('members.form');
 
-
-Route::get(
-    '/admin/dashboard',
-    [DashboardController::class, 'index']
-)->name('admin.dashboard');
 
 /*
 |--------------------------------------------------------------------------
@@ -219,13 +191,24 @@ Route::middleware(['auth', 'role:admin'])
 
 
     Route::resource('auteurs', AuteurController::class)->only(['index', 'store']);
+
+    Route::resource('users', UserController::class)->only(['index','store']);
+
+        Route::get('dashboard', function () {
+        $membresCount = Membre::count();
+        $eventsCount = Event::count();
+        $mediasCount = Media::count();
+        $booksCount = Book::count();
+        return view('admin.dashboard', compact(
+            'membresCount',
+            'eventsCount',
+            'mediasCount',
+            'booksCount',
+        ));
+    })->name('dashboard');
 });
 
-
-
-
-
-    Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

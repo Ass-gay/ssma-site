@@ -5,7 +5,7 @@
 						<a href="javascript:;" data-toggle="nav-profile">
 							<div class="cover with-shadow"></div>
 							<div class="image">
-								<img src="{{ asset('images/logo ssma.png') }}" alt="user" />
+								<img src="{{ asset('images/logo-ssma.png') }}" alt="user" />
 							</div>
 							<div class="info">
 								<b class="caret pull-right"></b>{{ Auth::user()->nom ?? 'Admin' }}
@@ -22,7 +22,15 @@
 				</ul>
 				<ul class="nav">
 
-					{{-- MEMBRES  --}}
+					{{-- USER  --}}
+					<li class="has-sub">
+						<a href="{{route('admin.users.index')}}">
+							<i class="fa-solid fa-user-shield"></i>
+							<span>Administrateurs</span>
+						</a>
+					</li>
+
+                    {{-- MEMBRES  --}}
 					<li class="has-sub">
 						<a href="{{route('admin.membres.index')}}">
 							<i class="fa fa-users"></i>

@@ -151,9 +151,8 @@
 
 
 
-		<!-- Section scroll to top  -->
-		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
-	</div>
+    <!-- Section scroll to top  -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
 
 	<!-- Modal de visualisation -->
 	<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
@@ -285,100 +284,6 @@
 
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-	<style>
-		/* Améliorations du design du tableau */
-		.table-hover tbody tr:hover {
-			background-color: #f8f9fa !important;
-			transform: scale(1.01);
-			transition: all 0.2s ease;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-		}
-
-		.table-warning {
-			background-color: #fff3cd !important;
-		}
-
-		.badge-pill {
-			border-radius: 50rem;
-			padding: 0.5em 1em;
-		}
-
-		.table thead th {
-			border-bottom: 2px solid #dee2e6;
-			font-weight: 600;
-			text-align: center;
-			font-size: 0.9rem;
-			letter-spacing: 0.3px;
-		}
-
-		.table tbody td {
-			vertical-align: middle;
-			padding: 1rem 0.75rem;
-		}
-
-		.btn-group .btn {
-			margin: 0 2px;
-			border-radius: 4px;
-		}
-
-		.text-muted {
-			color: #6c757d !important;
-		}
-
-		.font-weight-bold {
-			font-weight: 600 !important;
-		}
-
-		/* Animation pour les badges */
-		.badge {
-			transition: all 0.3s ease;
-		}
-
-		.badge:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-		}
-
-		/* Améliorations du modal */
-		.modal-content {
-			border-radius: 15px;
-			box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-		}
-
-		.modal-header {
-			border-radius: 15px 15px 0 0;
-		}
-
-		.modal-footer {
-			border-radius: 0 0 15px 15px;
-		}
-
-		.btn-lg {
-			padding: 12px 24px;
-			font-size: 16px;
-			border-radius: 8px;
-		}
-
-		.form-label {
-			font-weight: 600;
-			margin-bottom: 8px;
-		}
-
-		.form-label i {
-			margin-right: 8px;
-		}
-
-		/* Animation pour les champs */
-		.form-control {
-			transition: all 0.3s ease;
-		}
-
-		.form-control:focus {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-		}
-	</style>
 
 	<script>
 		function openViewModal(id) {

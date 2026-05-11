@@ -40,7 +40,7 @@
         <div class="col-lg-4 text-center">
 
             <figure class="media primary shadow-sm">
-            <img style="width:299px" src="images/logo ssma.png" class="hero-glow img-fluid" alt="SSMA Logo">
+            <img style="width:299px" src="images/logo-ssma.png" class="hero-glow img-fluid" alt="SSMA Logo">
             </figure>
 
         </div>

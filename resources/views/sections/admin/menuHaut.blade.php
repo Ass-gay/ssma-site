@@ -3,7 +3,7 @@
   <!-- LOGO / NOM -->
   <div class="navbar-header">
     <a href="{{ route('admin.dashboard') }}" class="navbar-brand">
-      <span class="navbar-logo"></span>
+      {{-- <span class="navbar-logo"></span> --}}
       <b>SSMA</b> Admin
     </a>
 
@@ -49,7 +49,7 @@
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
         <!-- IMAGE -->
-        <img src="{{ asset('images/logo ssma.png') }}" alt="user" />
+        <img src="{{ asset('images/logo-ssma.png') }}" alt="user" />
 
         <!-- NOM DYNAMIQUE -->
         <span class="d-none d-md-inline">

@@ -5,7 +5,7 @@
         {{-- LOGO --}}
         <a href="{{ route('home') }}" class="logo-box">
 
-            <img src="{{ asset('images/logo ssma.png') }}"
+            <img src="{{ asset('images/logo-ssma.png') }}"
                  alt="Logo">
 
         </a>
@@ -107,7 +107,7 @@
             @if(!Route::is('members.rules') && !Route::is('members.form'))
 
                 <a href="{{ route('members.rules') }}"
-                   class="btn-membre">
+                   class="btn-membre btn btn-primary-ghost btn-ong">
 
                     <i class="fa-solid fa-user-plus"></i>
 

@@ -113,20 +113,6 @@
 
 @include("sections.admin.script")
 
-{{-- ================= CSS ================= --}}
-<style>
-    .dropzone-box {
-        border: 2px dashed #aaa;
-        padding: 40px;
-        text-align: center;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    .dropzone-box:hover {
-        background: #f5f5f5;
-    }
-</style>
 
 {{-- ================= JS CLEAN ================= --}}
 <script>

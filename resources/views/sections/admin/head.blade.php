@@ -1,9 +1,9 @@
 <head>
 	<meta charset="utf-8" />
-	<title>AG GRAPHISTE | Admin</title>
+	<title>SSMA | Admin</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta content="" name="description" />
-	<meta content="" name="author" />
+	<meta name="description" content="SSMA Sénégal - Plateforme de gestion moderne">
+    <meta name="keywords" content="SSMA, Sénégal, gestion, administration">
 
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -23,7 +23,22 @@
 	<link href="../assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
 	<link href="{{ asset('templates/templateAdmin/assets/plugins/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" />
 	<!-- ================== END PAGE LEVEL STYLE ================== -->
-    
+
+
+    {{-- BaseContant --}}
+    <link rel="stylesheet" href="{{ asset('css/admin/baseContant.css') }}">
+
+    {{-- User --}}
+    <link rel="stylesheet" href="{{ asset('css/admin/user.css') }}">
+
+    {{-- Membre --}}
+    <link rel="stylesheet" href="{{ asset('css/admin/membre.css') }}">
+
+    {{-- Media --}}
+    <link rel="stylesheet" href="{{ asset('css/admin/media.css') }}">
+
+    {{-- Contact --}}
+    <link rel="stylesheet" href="{{ asset('css/admin/contact.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
 </head>

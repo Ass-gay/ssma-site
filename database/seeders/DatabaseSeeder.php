@@ -35,7 +35,7 @@ public function run(): void
         'nom' => 'Super Admin',
         'email' => 'superadmin@ssma.com',
         'password' => Hash::make('password'),
-        'role' => 'admin',
+        'role' => 'user',
     ]);
     // Users
     User::factory(1)->create();
