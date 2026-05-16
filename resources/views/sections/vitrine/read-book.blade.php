@@ -14,35 +14,44 @@
     <div class="container-fluid">
 
         {{-- HEADER --}}
-        <div class="pdf-header">
+        {{-- HEADER --}}
+<div class="pdf-header">
 
-            <div>
+    <div class="pdf-left">
 
-                <h2>
+        <h2>
+            {{ $book->title }}
+        </h2>
 
-                    {{ $book->title }}
+        <p>
+            Lecture PDF intégrée SSMA
+        </p>
 
-                </h2>
+    </div>
 
-                <p>
+    <div class="pdf-actions">
 
-                    Lecture PDF intégrée SSMA
+        {{-- DOWNLOAD --}}
+        <a href="{{ route('books.download', $book->id) }}"
+           class="btn-download">
 
-                </p>
+            <i class="fa-solid fa-download"></i>
 
-            </div>
+            Télécharger
 
-            {{-- DOWNLOAD --}}
-            <a href="{{ route('books.download', $book->id) }}"
-               class="btn-download">
+        </a>
 
-                <i class="fa-solid fa-download"></i>
+        {{-- CLOSE --}}
+        <a href="{{ route('books.auteurs') }}"
+           class="btn-close-pdf">
 
-                Télécharger
+            <i class="fa-solid fa-xmark"></i>
 
-            </a>
+        </a>
 
-        </div>
+    </div>
+
+</div>>
 
         {{-- PDF VIEWER --}}
         <div class="pdf-viewer">

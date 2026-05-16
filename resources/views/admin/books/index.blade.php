@@ -51,18 +51,6 @@
 
                             </div>
 
-                            {{-- AUTEUR --}}
-                            {{-- <div class="col-md-6 mb-3">
-
-                                <label>Auteur</label>
-
-                                <input type="text"
-                                    name="auteur"
-                                    class="form-control"
-                                    required>
-
-                            </div> --}}
-
                             {{-- TYPE --}}
                             <div class="col-md-6 mb-3">
 
@@ -83,22 +71,10 @@
 
                             </div>
 
-                            {{-- COVER --}}
+                            {{-- Auteur --}}
                             <div class="col-md-6 mb-3">
 
-                                <label>Cover</label>
-
-                                <input type="file"
-                                    name="cover"
-                                    class="form-control">
-
-                            </div>
-
-                            {{-- FILE --}}
-                            <div class="col-md-12 mb-3">
-
-                                <label>Fichier</label>
-
+                                <label>Auteur</label>
                                 <select name="auteur_id"
                                         class="form-control mb-3"
                                         required>
@@ -119,6 +95,22 @@
 
                                 </select>
 
+                            </div>
+
+                            {{-- COVER --}}
+                            <div class="col-md-6 mb-3">
+
+                                <label>Cover</label>
+
+                                <input type="file"
+                                    name="cover"
+                                    class="form-control">
+
+                            </div>
+
+                            {{-- FILE --}}
+                            <div class="col-md-12 mb-3">
+                                <label>Fichier</label>
                                 <input type="file" name="file" class="form-control" required>
 
                             </div>

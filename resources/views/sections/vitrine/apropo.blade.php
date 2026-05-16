@@ -9,41 +9,43 @@
 
 <main class="main">
 
-    <section class="about-hero"></section>
+    <section class="about-hero"
+        style="background-image:url('{{ asset('images/bienvenu.jpg') }}')">
+    </section>
 
-<section class="about section">
-    <div class="container">
-        <div class="row align-items-center g-5">
+    <section class="about section">
+        <div class="container">
+            <div class="row align-items-center g-5">
 
-            <div class="col-lg-6">
-                <img src="{{ asset('images/serigne.jpeg') }}"
-                     class="img-fluid rounded-4 shadow-lg"
-                     alt="SSMA">
-            </div>
-
-            <div class="col-lg-6">
-
-                <div class="section-title">
-                    <h2>Présentation</h2>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="{{ asset('images/serigne.jpeg') }}"
+                        class="img-fluid rounded-4 shadow-lg"
+                        alt="SSMA">
                 </div>
 
-                <p class="about-text">
-                    L'association SSMA est une organisation créée à Dakar le 15 août 2016.
-                    Elle œuvre dans le patriotisme, le civisme, la solidarité et le développement communautaire.
-                </p>
+                <div class="col-lg-6 mt-4 mt-lg-0">
 
-                <div class="about-box">
-                    <div><i class="bi bi-check-circle-fill"></i> Patriotisme</div>
-                    <div><i class="bi bi-check-circle-fill"></i> Développement</div>
-                    <div><i class="bi bi-check-circle-fill"></i> Éducation</div>
-                    <div><i class="bi bi-check-circle-fill"></i> Solidarité</div>
+                    <div class="section-title">
+                        <h2>Présentation</h2>
+                    </div>
+
+                    <p class="about-text">
+                        L'association SSMA est une organisation créée à Dakar le 15 août 2016.
+                        Elle œuvre dans le patriotisme, le civisme, la solidarité et le développement communautaire.
+                    </p>
+
+                    <div class="about-box">
+                        <div><i class="bi bi-check-circle-fill"></i> Patriotisme</div>
+                        <div><i class="bi bi-check-circle-fill"></i> Développement</div>
+                        <div><i class="bi bi-check-circle-fill"></i> Éducation</div>
+                        <div><i class="bi bi-check-circle-fill"></i> Solidarité</div>
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- TIMELINE -->
     <section class="timeline-section">

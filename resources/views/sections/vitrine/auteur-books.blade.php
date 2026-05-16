@@ -83,9 +83,8 @@
                             {{-- PDF --}}
                             @if($book->type == 'Pdf')
 
-                                <a href="{{ asset('storage/'.$book->file) }}"
-                                target="_blank"
-                                class="btn-book btn-pdf">
+                                <a href="{{ route('books.read', $book->id) }}"
+                                    class="btn-book btn-pdf">
 
                                     <i class="fa-solid fa-book-open"></i>
 
