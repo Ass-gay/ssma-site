@@ -4,16 +4,9 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     zip \
-    curl \
-    libzip-dev \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev
+    libzip-dev
 
-RUN docker-php-ext-install \
-    pdo \
-    pdo_mysql \
-    zip
+RUN docker-php-ext-install zip
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
@@ -22,10 +15,6 @@ WORKDIR /app
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
-
-RUN cp .env.example .env || true
-
-RUN php artisan key:generate || true
 
 EXPOSE 10000
 
