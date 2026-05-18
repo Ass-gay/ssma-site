@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-@include("sections.vitrine.head")
-
-<body class="index-page">
-
-@include("sections.vitrine.header")
-
-<main class="main">
+@section('content')
 
     <!-- MEDIA SECTION -->
     <section class="media section">
@@ -185,11 +178,7 @@
                 </div>
     </section>
 
-</main>
-
-@include("sections.vitrine.footer")
-@include("sections.vitrine.scroll")
-@include("sections.vitrine.script")
+@endsection
 
 <!-- LIGHTBOX -->
 <div id="lightboxModal" class="lightbox" onclick="closeLightbox()">
@@ -197,24 +186,25 @@
     <img id="lightboxImg" class="lightbox-img">
 </div>
 
+@push('scripts')
 
+    <script>
 
-<script>
-    function openLightbox(src) {
-        document.getElementById('lightboxModal').style.display = 'flex';
-        document.getElementById('lightboxImg').src = src;
-        document.body.style.overflow = 'hidden';
-    }
+        function openLightbox(src) {
+            document.getElementById('lightboxModal').style.display = 'flex';
+            document.getElementById('lightboxImg').src = src;
+            document.body.style.overflow = 'hidden';
+        }
 
-    function closeLightbox() {
-        document.getElementById('lightboxModal').style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
+        function closeLightbox() {
+            document.getElementById('lightboxModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
 
-    document.addEventListener('keydown', function(e) {
-        if (e.key === "Escape") closeLightbox();
-    });
-</script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") closeLightbox();
+        });
 
-</body>
-</html>
+    </script>
+
+@endpush

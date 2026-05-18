@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends('layouts.app')
 
-@include("sections.vitrine.head")
-
-<body class="index-page">
-
-@include("sections.vitrine.header")
-
-<main class="main">
+@section('content')
 
     <section class="authors-section">
 
@@ -97,9 +90,4 @@
 
     </section>
 
-    @include("sections.vitrine.footer")
-
-</main>
-
-</body>
-</html>
+@endsection

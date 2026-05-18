@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-@include("sections.vitrine.head")
-
-<body class="index-page">
-
-@include("sections.vitrine.header")
-
-<main class="main">
+@section('content')
 
     <section class="about-hero"
         style="background-image:url('{{ asset('images/bienvenu.jpg') }}')">
@@ -398,57 +391,47 @@
         </div>
     </section>
 
-</main>
 
+@endsection
 
+@push('scripts')
+    <script>
+        AOS.init({
+            duration:1000,
+            once:true
+        });
+    </script>
 
-@include("sections.vitrine.footer")
-@include("sections.vitrine.scroll")
-@include("sections.vitrine.script")
+    <script>
+        new Swiper(".mySwiper", {
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+            loop:true,
 
-<script>
-    AOS.init({
-        duration:1000,
-        once:true
-    });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-    new Swiper(".mySwiper", {
-
-        loop:true,
-
-        autoplay:{
-            delay:2500,
-        },
-
-        spaceBetween:20,
-
-        breakpoints:{
-
-            320:{
-                slidesPerView:1,
+            autoplay:{
+                delay:2500,
             },
 
-            768:{
-                slidesPerView:2,
-            },
+            spaceBetween:20,
 
-            1024:{
-                slidesPerView:3,
+            breakpoints:{
+
+                320:{
+                    slidesPerView:1,
+                },
+
+                768:{
+                    slidesPerView:2,
+                },
+
+                1024:{
+                    slidesPerView:3,
+                }
+
             }
 
-        }
-
-    });
-</script>
-
-</body>
-</html>
+        });
+    </script>
+@endpush
 
 
 

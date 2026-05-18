@@ -86,6 +86,14 @@
 						</a>
 					</li>
 
+                    {{-- Section --}}
+					<li class="has-sub">
+						<a href="{{route('admin.sections.index')}}">
+							<i class="fa fa-sitemap"></i>
+							<span>Section</span>
+						</a>
+					</li>
+
 					{{-- Déconnexion --}}
 					<li class=" mt-2 has-sub">
 						<form method="POST" action="{{ route('logout') }}">
@@ -100,5 +108,5 @@
 					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
 				</ul>
 			</div>
-		</div>
-		<div class="sidebar-bg"></div>
+</div>
+<div class="sidebar-bg"></div>

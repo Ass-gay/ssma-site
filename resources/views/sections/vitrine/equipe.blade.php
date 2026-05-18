@@ -1,107 +1,100 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends('layouts.app')
 
-@include("sections.vitrine.head")
+@section('content')>
 
-<body class="index-page">
+    <section id="team" class="team-premium">
 
-@include("sections.vitrine.header")
+        {{-- TITLE --}}
+        <div class="container">
+            <div class="container section-title text-center">
+                <h2>
+                    Notre Équipe
+                </h2>
+                <p class="mb-1">
+                    Découvrez les membres engagés de la communauté SSMA
+                </p>
+            </div>
 
-<main class="main">
-
-<section id="team" class="team-premium">
-
-    {{-- TITLE --}}
-    <div class="container">
-        <div class="container section-title text-center">
-            <h2>
-                Notre Équipe
-            </h2>
-            <p class="mb-1">
-                Découvrez les membres engagés de la communauté SSMA
-            </p>
         </div>
 
-    </div>
+        {{-- TEAM --}}
+        <div class="container">
 
-    {{-- TEAM --}}
-    <div class="container">
+            <div class="row g-4">
 
-        <div class="row g-4">
+                @forelse($equipes as $equipe)
 
-            @forelse($equipes as $equipe)
+                    <div class="col-lg-3 col-md-6">
 
-                <div class="col-lg-3 col-md-6">
+                        <div class="team-card">
 
-                    <div class="team-card">
+                            {{-- IMAGE --}}
+                            <div class="team-image">
 
-                        {{-- IMAGE --}}
-                        <div class="team-image">
+                                <img src="{{ asset('storage/'.$equipe->photo) }}"
+                                    alt="{{ $equipe->nom }}">
 
-                            <img src="{{ asset('storage/'.$equipe->photo) }}"
-                                 alt="{{ $equipe->nom }}">
+                                {{-- OVERLAY --}}
+                                <div class="team-overlay">
 
-                            {{-- OVERLAY --}}
-                            <div class="team-overlay">
 
+                                </div>
+
+                            </div>
+
+                            {{-- CONTENT --}}
+                            <div class="team-content">
+
+                                <h3>
+
+                                    {{ $equipe->nom }}
+
+                                </h3>
+
+                                <span class="role">
+
+                                    {{ $equipe->role ?? 'Membre SSMA' }}
+
+                                </span>
+
+                                @if($equipe->bio)
+
+                                    <p>
+
+                                        {{ Str::limit($equipe->bio, 90) }}
+
+                                    </p>
+
+                                @endif
 
                             </div>
 
                         </div>
 
-                        {{-- CONTENT --}}
-                        <div class="team-content">
+                    </div>
 
-                            <h3>
+                @empty
 
-                                {{ $equipe->nom }}
+                    <div class="text-center">
 
-                            </h3>
+                        <h4>
 
-                            <span class="role">
+                            Aucune équipe disponible
 
-                                {{ $equipe->role ?? 'Membre SSMA' }}
-
-                            </span>
-
-                            @if($equipe->bio)
-
-                                <p>
-
-                                    {{ Str::limit($equipe->bio, 90) }}
-
-                                </p>
-
-                            @endif
-
-                        </div>
+                        </h4>
 
                     </div>
 
-                </div>
+                @endforelse
 
-            @empty
-
-                <div class="text-center">
-
-                    <h4>
-
-                        Aucune équipe disponible
-
-                    </h4>
-
-                </div>
-
-            @endforelse
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-{{-- Contact --}}
-<section id="contact" class="contact-ssma">
+    {{-- Contact --}}
+    <section id="contact" class="contact-ssma">
         <div class="container">
 
             <!-- TITRE -->
@@ -198,11 +191,6 @@
         </div>
     </section>
 
-</main>
+@endsection
 
-@include("sections.vitrine.footer")
-@include("sections.vitrine.scroll")
-@include("sections.vitrine.script")
 
-</body>
-</html>

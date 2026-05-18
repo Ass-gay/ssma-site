@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-@include("sections.vitrine.head")
-
-<body class="index-page">
-
-@include("sections.vitrine.header")
-
-<main class="main">
+@section('content')>
 
     <section id="contact" class="contact-ssma">
         <div class="container">
@@ -106,11 +99,4 @@
         </div>
     </section>
 
-</main>
-
-@include("sections.vitrine.footer")
-@include("sections.vitrine.scroll")
-@include("sections.vitrine.script")
-
-</body>
-</html>
+@endsection

@@ -1,76 +1,63 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends('layouts.app')
 
-@include("sections.vitrine.head")
-
-<body class="index-page">
-
-@include("sections.vitrine.header")
-
-<main class="main">
+@section('content')
 
     <section class="pdf-page">
 
-    <div class="container-fluid">
+        <div class="container-fluid">
 
-        {{-- HEADER --}}
-        {{-- HEADER --}}
-<div class="pdf-header">
+            {{-- HEADER --}}
+            <div class="pdf-header">
 
-    <div class="pdf-left">
+                <div class="pdf-left">
 
-        <h2>
-            {{ $book->title }}
-        </h2>
+                    <h2>
+                        {{ $book->title }}
+                    </h2>
 
-        <p>
-            Lecture PDF intégrée SSMA
-        </p>
+                    <p>
+                        Lecture PDF intégrée SSMA
+                    </p>
 
-    </div>
+                </div>
 
-    <div class="pdf-actions">
+                <div class="pdf-actions">
 
-        {{-- DOWNLOAD --}}
-        <a href="{{ route('books.download', $book->id) }}"
-           class="btn-download">
+                    {{-- DOWNLOAD --}}
+                    <a href="{{ route('books.download', $book->id) }}"
+                    class="btn-download">
 
-            <i class="fa-solid fa-download"></i>
+                        <i class="fa-solid fa-download"></i>
 
-            Télécharger
+                        Télécharger
 
-        </a>
+                    </a>
 
-        {{-- CLOSE --}}
-        <a href="{{ route('books.auteurs') }}"
-           class="btn-close-pdf">
+                    {{-- CLOSE --}}
+                    <a href="{{ route('books.auteurs') }}"
+                    class="btn-close-pdf">
 
-            <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark"></i>
 
-        </a>
+                    </a>
 
-    </div>
+                </div>
 
-</div>>
+            </div>>
 
-        {{-- PDF VIEWER --}}
-        <div class="pdf-viewer">
+            {{-- PDF VIEWER --}}
+            <div class="pdf-viewer">
 
-            <embed
-            src="{{ route('books.viewPdf', $book->id) }}#toolbar=1"
-            type="application/pdf"
-            width="100%"
-            height="100%">
+                <embed
+                src="{{ route('books.viewPdf', $book->id) }}#toolbar=1"
+                type="application/pdf"
+                width="100%"
+                height="100%">
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-    @include("sections.vitrine.footer")
-
-</main>
-
-</body>
-</html>
+@endsection>

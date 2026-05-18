@@ -26,43 +26,50 @@
                 <ul>
 
                     <li>
-                        <a href="{{ route('home') }}">
+                        <a href="{{ route('home') }}"
+                        class="{{ Route::is('home') ? 'active-link' : '' }}">
                             ACCUEIL
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('apropos') }}">
+                        <a href="{{ route('apropos') }}"
+                        class="{{ Route::is('apropos') ? 'active-link' : '' }}">
                             À PROPOS
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('events.vitrine') }}">
+                        <a href="{{ route('events.vitrine') }}"
+                        class="{{ Route::is('events.*') ? 'active-link' : '' }}">
                             ÉVÉNEMENTS
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('media.vitrine') }}">
+                        <a href="{{ route('media.vitrine') }}"
+                        class="{{ Route::is('media.*') ? 'active-link' : '' }}">
                             MEDIA
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('equipe.vitrine') }}">
+                        <a href="{{ route('equipe.vitrine') }}"
+                        class="{{ Route::is('equipe.*') ? 'active-link' : '' }}">
                             ÉQUIPE
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('books.auteurs') }}">
+                        <a href="{{ route('books.auteurs') }}"
+                        class="{{ Route::is('books.*') ? 'active-link' : '' }}">
                             BIBLIOTHÈQUE
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('contact') }}">
+                        <a href="{{ route('contact') }}"
+                        class="{{ Route::is('contact') ? 'active-link' : '' }}">
                             CONTACT
                         </a>
                     </li>
@@ -125,49 +132,49 @@
 
 <script>
 
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
 
-    const menuBtn = document.getElementById('menuBtn');
+        const menuBtn = document.getElementById('menuBtn');
 
-    const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-    const menuIcon = document.getElementById('menuIcon');
+        const menuIcon = document.getElementById('menuIcon');
 
-    // OUVRIR / FERMER
-    menuBtn.addEventListener('click', function (e) {
+        // OUVRIR / FERMER
+        menuBtn.addEventListener('click', function (e) {
 
-        e.preventDefault();
+            e.preventDefault();
 
-        e.stopPropagation();
+            e.stopPropagation();
 
-        mobileMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
 
-        // ICON
-        if (mobileMenu.classList.contains('active')) {
+            // ICON
+            if (mobileMenu.classList.contains('active')) {
 
-            menuIcon.className = 'fa-solid fa-xmark';
+                menuIcon.className = 'fa-solid fa-xmark';
 
-        } else {
+            } else {
 
-            menuIcon.className = 'fa-solid fa-bars';
+                menuIcon.className = 'fa-solid fa-bars';
 
-        }
+            }
 
-    });
+        });
 
-    // FERMER SI CLICK SUR LIEN
-    document.querySelectorAll('#navmenu a').forEach(link => {
+        // FERMER SI CLICK SUR LIEN
+        document.querySelectorAll('#navmenu a').forEach(link => {
 
-        link.addEventListener('click', function () {
+            link.addEventListener('click', function () {
 
-            mobileMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
 
-            menuIcon.className = 'fa-solid fa-bars';
+                menuIcon.className = 'fa-solid fa-bars';
+
+            });
 
         });
 
     });
-
-});
 
 </script>

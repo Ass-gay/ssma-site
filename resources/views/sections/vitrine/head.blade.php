@@ -1,94 +1,105 @@
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>SSMA - Accueil</title>
-  <meta name="description" content="SSMA Sénégal - Plateforme de gestion moderne">
-  <meta name="keywords" content="SSMA, Sénégal, gestion, administration">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Favicons -->
-  <link rel="icon" href="{{ asset('images/logo-ssma.png') }}">
-  <link href="templates/templateVitrine/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <meta charset="utf-8">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<!-- Vendor CSS Files -->
-<link href="{{ asset('templates/templateVitrine/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('templates/templateVitrine/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-<link href="{{ asset('templates/templateVitrine/assets/vendor/aos/aos.css') }}" rel="stylesheet">
-<link href="{{ asset('templates/templateVitrine/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-<link href="{{ asset('templates/templateVitrine/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <title>SSMA - Accueil</title>
 
-<!-- Main CSS File -->
-<link href="{{ asset('templates/templateVitrine/assets/css/main.css') }}" rel="stylesheet">
+    <meta name="description"
+          content="SSMA Sénégal - Plateforme de gestion moderne">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="keywords"
+          content="SSMA, Sénégal, gestion, administration">
 
+    {{-- FAVICON --}}
+    <link rel="icon"
+          href="{{ asset('images/logo-ssma.png') }}">
 
-{{-- Responsive --}}
-<link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    {{-- FONTS --}}
+    <link href="https://fonts.googleapis.com"
+          rel="preconnect">
 
-{{-- Formulare --}}
-<link rel="stylesheet" href="{{ asset('css/form.css') }}">
+    <link href="https://fonts.gstatic.com"
+          rel="preconnect"
+          crossorigin>
 
-{{-- Reglement --}}
-<link rel="stylesheet" href="{{ asset('css/rules.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-{{-- Auteurs --}}
-<link rel="stylesheet" href="{{ asset('css/auteur.css') }}">
+    {{-- FONT AWESOME --}}
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-{{-- Books --}}
-<link rel="stylesheet" href="{{ asset('css/books.css') }}">
+    {{-- VENDOR CSS --}}
+    <link href="{{ asset('templates/templateVitrine/assets/vendor/bootstrap/css/bootstrap.min.css') }}"
+          rel="stylesheet">
 
-{{-- Read-book --}}
-<link rel="stylesheet" href="{{ asset('css/read-book.css') }}">
+    <link href="{{ asset('templates/templateVitrine/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}"
+          rel="stylesheet">
 
-{{-- Media --}}
-<link rel="stylesheet" href="{{ asset('css/media.css') }}">
+    <link href="{{ asset('templates/templateVitrine/assets/vendor/aos/aos.css') }}"
+          rel="stylesheet">
 
-{{-- Galerie --}}
-<link rel="stylesheet" href="{{ asset('css/galerie.css') }}">
+    <link href="{{ asset('templates/templateVitrine/assets/vendor/glightbox/css/glightbox.min.css') }}"
+          rel="stylesheet">
 
-{{-- A Propos --}}
-<link rel="stylesheet" href="{{ asset('css/apropos.css') }}">
+    <link href="{{ asset('templates/templateVitrine/assets/vendor/swiper/swiper-bundle.min.css') }}"
+          rel="stylesheet">
 
-{{-- Equipe --}}
-<link rel="stylesheet" href="{{ asset('css/equipe.css') }}">
+    {{-- MAIN TEMPLATE CSS --}}
+    <link href="{{ asset('templates/templateVitrine/assets/css/main.css') }}"
+          rel="stylesheet">
 
-{{-- Auteur --}}
-<link rel="stylesheet" href="{{ asset('css/auteur.css') }}">
+    {{-- CSS PERSO --}}
+    <link rel="stylesheet"
+          href="{{ asset('css/responsive.css') }}">
 
-{{-- Contact --}}
-<link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('css/form.css') }}">
 
-{{-- Auteur-book --}}
-<link rel="stylesheet" href="{{ asset('css/auteur-books.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('css/rules.css') }}">
 
+    <link rel="stylesheet"
+          href="{{ asset('css/auteur.css') }}">
 
-{{-- Auteur-Menu --}}
-<link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('css/books.css') }}">
 
+    <link rel="stylesheet"
+          href="{{ asset('css/read-book.css') }}">
 
+    <link rel="stylesheet"
+          href="{{ asset('css/media.css') }}">
 
+    <link rel="stylesheet"
+          href="{{ asset('css/galerie.css') }}">
 
-{{-- Les Indeicateurs --}}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+    <link rel="stylesheet"
+          href="{{ asset('css/apropos.css') }}">
 
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="{{ asset('css/equipe.css') }}">
 
-<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet"
+          href="{{ asset('css/contact.css') }}">
 
+    <link rel="stylesheet"
+          href="{{ asset('css/auteur-books.css') }}">
 
+    <link rel="stylesheet"
+          href="{{ asset('css/header.css') }}">
 
+    {{-- TEL INPUT --}}
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
 
-  <!-- =======================================================
-  * Template Name: FlexBiz
-  * Template URL: https://bootstrapmade.com/flexbiz-bootstrap-business-template/
-  * Updated: Aug 04 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    {{-- Galerie --}}
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    {{-- SWIPER --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>

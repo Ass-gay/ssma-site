@@ -1,71 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-@include("sections.vitrine.head")
+@section('content')
 
-<body class="index-page">
+    <div class="container py-5">
 
-@include("sections.vitrine.header")
+        <div class="container section-title text-center">
+            <h2 class="mt-2">
+                Album Événement
+            </h2>
+            <p class="mb-1">
+                Moments forts et souvenirs capturés en images
+            </p>
+        </div>
 
-<main class="main">
+        <div class="row g-4">
 
-        <div class="container py-5">
+            @foreach($events as $event)
 
-            <div class="container section-title text-center">
-                <h2 class="mt-2">
-                    Album Événement
-                </h2>
-                <p class="mb-1">
-                    Moments forts et souvenirs capturés en images
-                </p>
-            </div>
+                @php
+                    $cover = $event->media->first();
+                @endphp
 
-            <div class="row g-4">
+                <div class="col-md-4">
 
-                @foreach($events as $event)
+                    <div class="card shadow-sm">
 
-                    @php
-                        $cover = $event->media->first();
-                    @endphp
-
-                    <div class="col-md-4">
-
-                        <div class="card shadow-sm">
-
-                            @if($cover)
-                                @if($cover->type == 'image')
-                                    <img src="{{ asset('storage/'.$cover->file) }}"
-                                        class="card-img-top"
-                                        style="height:220px; object-fit:cover;">
-                                @else
-                                    <video class="card-img-top" style="height:220px;">
-                                        <source src="{{ asset('storage/'.$cover->file) }}">
-                                    </video>
-                                @endif
+                        @if($cover)
+                            @if($cover->type == 'image')
+                                <img src="{{ asset('storage/'.$cover->file) }}"
+                                    class="card-img-top"
+                                    style="height:220px; object-fit:cover;">
+                            @else
+                                <video class="card-img-top" style="height:220px;">
+                                    <source src="{{ asset('storage/'.$cover->file) }}">
+                                </video>
                             @endif
+                        @endif
 
-                            <div class="card-body text-center">
+                        <div class="card-body text-center">
 
-                                <h5 class="mb-4">{{ $event->title }}</h5>
+                            <h5 class="mb-4">{{ $event->title }}</h5>
 
-                                <p>{{ $event->media->count() }} médias</p>
+                            <p>{{ $event->media->count() }} médias</p>
 
-                                <a href="{{ route('events.show', $event->id) }}"
-                                class="btn btn-dark btn-sm">
-                                    Voir album
-                                </a>
-
-                            </div>
+                            <a href="{{ route('events.show', $event->id) }}"
+                            class="btn btn-dark btn-sm">
+                                Voir album
+                            </a>
 
                         </div>
 
                     </div>
 
-                @endforeach
+                </div>
 
-            </div>
+            @endforeach
 
         </div>
+
+    </div>
+
     {{-- Contact --}}
     <section id="contact" class="contact-ssma">
         <div class="container">
@@ -164,12 +158,5 @@
         </div>
     </section>
 
-</main>
-
-@include("sections.vitrine.footer")
-@include("sections.vitrine.scroll")
-@include("sections.vitrine.script")
-
-</body>
-</html>
+@endsection
 
